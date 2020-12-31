@@ -8,6 +8,7 @@ import { typeDefs, resolvers } from "./graphql";
 
 const mount = async (app: Application) => {
   const db = await connectDatabase();
+
   const server = new ApolloServer({
     typeDefs,
     resolvers,
@@ -15,9 +16,10 @@ const mount = async (app: Application) => {
   });
 
   server.applyMiddleware({ app, path: "/api" });
-  app.listen(process.env.PORT);
 
-  console.log(`[app] : http://localhost:${process.env.PORT}`);
+  app.listen(process.env.PORT);
 };
 
-mount(express());
+mount(express())
+  .then(() => console.log(`[app] : http://localhost:${process.env.PORT}`))
+  .catch((error) => console.error(error));
