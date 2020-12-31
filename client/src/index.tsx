@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import ApolloClient from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 
-import { Listings } from "./sections";
+import { App } from "./components/app/App";
 
 import "./styles/index.css";
 
@@ -11,7 +11,7 @@ const client = new ApolloClient({ uri: "/api" });
 
 render(
   <ApolloProvider client={client}>
-    <Listings title="TinyHouse Listings" />
+    <App />
   </ApolloProvider>,
   document.getElementById("root")
 );

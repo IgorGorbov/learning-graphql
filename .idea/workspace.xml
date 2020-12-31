@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8ab65708-523a-4ded-bc0f-55fe136c82d3" name="Default Changelist" comment="" />
+    <list default="true" id="8ab65708-523a-4ded-bc0f-55fe136c82d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/app/App.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Home/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Host/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Listing/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/Listings/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/NotFound/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/pages/User/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/constants/routers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/Listings.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/components/ListingsSkeleton/ListingsSkeleton.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/components/ListingsSkeleton/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/components/ListingsSkeleton/styles/ListingsSkeleton.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/components/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/Listings/styles/Listings.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/sections/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1mNXboZ6IhjO6JUWXS3vYrl3gKt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -26,6 +67,12 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/server/node_modules/typescript/lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/client/src/components/pages" />
+      <recent name="$PROJECT_DIR$/client/src/components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -36,11 +83,25 @@
       <updated>1609335098098</updated>
       <workItem from="1609335100169" duration="1985000" />
       <workItem from="1609337825669" duration="498000" />
+      <workItem from="1609421062961" duration="689000" />
+      <workItem from="1609421757054" duration="458000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="789" y="356" key="SettingsEditor" timestamp="1609338019091">
