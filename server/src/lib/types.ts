@@ -59,3 +59,31 @@ export interface Database {
   readonly users: Collection<User>;
   readonly booking: Collection<Booking>;
 }
+
+export interface Viewer {
+  readonly _id?: string;
+  readonly token?: string;
+  readonly avatar?: string;
+  readonly walledId?: string;
+  readonly didRequest: boolean;
+}
+
+export interface LoginArgs {
+  readonly input: { code: string } | null;
+}
+
+export interface LoginDataProps {
+  readonly id?: string;
+  readonly token?: string;
+  readonly avatar?: string;
+  readonly hasWallet: boolean;
+  readonly didRequest: boolean;
+}
+
+export interface LoginProps {
+  readonly logIn: LoginDataProps;
+}
+
+export interface AuthUrlProps {
+  readonly authUrl: string;
+}

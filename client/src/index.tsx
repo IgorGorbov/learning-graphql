@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
-import ApolloClient from "apollo-boost";
+import ApolloClient, { InMemoryCache } from "apollo-boost";
 import { ApolloProvider } from "@apollo/react-hooks";
 
 import { App } from "./components/app/App";
 
-import "./styles/index.css";
+import "./index.css";
 
-const client = new ApolloClient({ uri: "/api" });
+const client: any = new ApolloClient({ uri: "/api" });
 
 render(
   <ApolloProvider client={client}>

@@ -3,5 +3,6 @@ export const Routes = {
   Host: "/host",
   Listing: "/listing/:id",
   Listings: "/listings/:location?",
-  User: "/user/:id"
+  User: "/user/:id",
+  Login: "/login"
 };
