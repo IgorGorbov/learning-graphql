@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 import { useApolloClient, useMutation } from "@apollo/react-hooks";
 import { Card, Layout, Spin, Typography } from "antd";
 
-import { LoginArgs, LoginProps, AuthUrlProps, Viewer } from "../../../../../server/src/types";
+import { AuthUrlProps, LoginArgs, LoginProps, Viewer } from "../../../types";
 import GoogleLogo from "../../../assets/google_logo.jpg";
 import { LOGIN } from "../../../lib/graphql/mutations/login";
 import { AUTH_URL } from "../../../lib/graphql/queries/authurl";

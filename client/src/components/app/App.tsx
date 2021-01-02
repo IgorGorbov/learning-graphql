@@ -1,7 +1,8 @@
-import * as React from "react";
+import React, { useState } from "react";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Affix, Layout } from "antd";
 
 import { Viewer } from "../../types";
 import { Routes } from "../../constants/routers";
@@ -12,15 +13,15 @@ import { ListingPage } from "../pages/Listing";
 import { UserPage } from "../pages/User";
 import { NotFoundPage } from "../pages/NotFound";
 import { LoginPage } from "../pages/Login";
-import { useState } from "react";
+import { AppHeader } from "../ui/AppHeader";
 
-const client: any = new ApolloClient({ uri: "http://localhost:5000/api" });
+const client: any = new ApolloClient({ uri: "/api" });
 
 const initViewer = {
   id: undefined,
   token: undefined,
   avatar: undefined,
-  hasWallet: undefined,
+  hasWallet: false,
   didRequest: false
 };
 
@@ -29,18 +30,24 @@ export function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <Switch>
-          <Route exact path={Routes.Home} component={HomePage} />
-          <Route exact path={Routes.Host} component={HostPage} />
-          <Route exact path={Routes.Listings} component={ListingsPage} />
-          <Route exact path={Routes.Listing} component={ListingPage} />
-          <Route exact path={Routes.User} component={UserPage} />
-          <Route exact path={Routes.Login} render={(props) => <LoginPage {...props} setViewer={setViewer} />} />
+      <Layout id="app">
+        <Router>
+          <Affix offsetTop={0} className="app__affix-header">
+            <AppHeader viewer={viewer} setViewer={setViewer} />
+          </Affix>
 
-          <Route component={NotFoundPage} />
-        </Switch>
-      </Router>
+          <Switch>
+            <Route exact path={Routes.Home} component={HomePage} />
+            <Route exact path={Routes.Host} component={HostPage} />
+            <Route exact path={Routes.Listings} component={ListingsPage} />
+            <Route exact path={Routes.Listing} component={ListingPage} />
+            <Route exact path={Routes.User} component={UserPage} />
+            <Route exact path={Routes.Login} render={(props) => <LoginPage {...props} setViewer={setViewer} />} />
+
+            <Route component={NotFoundPage} />
+          </Switch>
+        </Router>
+      </Layout>
     </ApolloProvider>
   );
 }

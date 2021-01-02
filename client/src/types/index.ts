@@ -2,7 +2,7 @@ export interface Viewer {
   readonly id?: string;
   readonly token?: string;
   readonly avatar?: string;
-  readonly hasWallet?: string;
+  readonly hasWallet: boolean;
   readonly didRequest: boolean;
 }
 
@@ -32,4 +32,36 @@ export interface DeleteListing {
 
 export interface DeleteListingVariables {
   readonly id: string;
+}
+
+export interface LoginArgs {
+  readonly input: { code: string } | null;
+}
+
+export interface LoginDataProps {
+  readonly id?: string;
+  readonly token?: string;
+  readonly avatar?: string;
+  readonly hasWallet: boolean;
+  readonly didRequest: boolean;
+}
+
+export interface LoginProps {
+  readonly login: LoginDataProps;
+}
+
+export interface AuthUrlProps {
+  readonly authUrl: string;
+}
+
+export interface LogoutDataProps {
+  readonly id?: string;
+  readonly token?: string;
+  readonly avatar?: string;
+  readonly hasWallet: boolean;
+  readonly didRequest: boolean;
+}
+
+export interface LogoutProps {
+  readonly logOut: LogoutDataProps;
 }
