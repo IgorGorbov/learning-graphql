@@ -17,8 +17,8 @@ interface MenuItemsProps {
 export const MenuItems = ({ viewer, setViewer }: MenuItemsProps) => {
   const [logOut] = useMutation<LogoutProps>(LOGOUT, {
     onCompleted: (data) => {
-      if (data && data.logOut) {
-        setViewer(data.logOut);
+      if (data && data.logout) {
+        setViewer(data.logout);
         sessionStorage.removeItem("token");
         displaySuccessNotification("You've successfully logged out!");
       }

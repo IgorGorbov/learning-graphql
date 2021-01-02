@@ -63,5 +63,5 @@ export interface LogoutDataProps {
 }
 
 export interface LogoutProps {
-  readonly logOut: LogoutDataProps;
+  readonly logout: LogoutDataProps;
 }
