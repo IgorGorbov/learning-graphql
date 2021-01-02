@@ -81,7 +81,7 @@ export interface LoginDataProps {
 }
 
 export interface LoginProps {
-  readonly logIn: LoginDataProps;
+  readonly login: LoginDataProps;
 }
 
 export interface AuthUrlProps {

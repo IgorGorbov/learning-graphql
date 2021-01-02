@@ -1,7 +1,7 @@
 import crypto from "crypto";
 import { IResolvers } from "apollo-server-express";
 
-import { Database, LoginArgs, Viewer } from "../../lib/types";
+import { Database, LoginArgs, Viewer } from "../../types";
 import { Google } from "../../utils/google";
 
 async function loginWitGoogle(code: string, token: string, db: Database) {
@@ -59,6 +59,7 @@ export const userResolvers: IResolvers = {
     login: async (_root: undefined, { input }: LoginArgs, { db }) => {
       try {
         const token = crypto.randomBytes(16).toString("hex");
+
         const viewer = input?.code ? await loginWitGoogle(input?.code, token, db) : undefined;
 
         if (!viewer) {

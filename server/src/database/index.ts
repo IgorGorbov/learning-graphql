@@ -1,6 +1,6 @@
 import { MongoClient } from "mongodb";
 
-import { Database } from "../lib/types";
+import { Database } from "../types";
 
 const url = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_USER_PASSWORD}@${process.env.DB_HOST}/${process.env.DB_CLUSTER}`;
 

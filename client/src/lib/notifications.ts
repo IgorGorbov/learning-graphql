@@ -1,7 +1,7 @@
 import { message, notification } from "antd";
 
 export const displaySuccessNotification = (message: string, description?: string) => {
-  return notification["success"]({
+  return notification.success({
     message,
     description,
     placement: "topLeft",
