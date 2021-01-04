@@ -3,22 +3,16 @@ import { Link } from "react-router-dom";
 import { Card, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
+import { Listing } from "../../types";
 import { formatListingPrice } from "../../lib/format";
 
-interface Props {
-  listing: {
-    id: string;
-    title: string;
-    image: string;
-    address: string;
-    price: number;
-    numOfGuests: number;
-  };
+interface ListingCardProps {
+  readonly listing: Listing;
 }
 
 const { Text, Title } = Typography;
 
-export const ListingCard = ({ listing }: Props) => {
+export const ListingCard = ({ listing }: ListingCardProps) => {
   const { id, title, image, address, price, numOfGuests } = listing;
 
   return (

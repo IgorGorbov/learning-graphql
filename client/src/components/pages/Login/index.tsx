@@ -24,6 +24,11 @@ export const LoginPage = ({ setViewer }: LoginPageProps) => {
       onCompleted: (data) => {
         if (data && data.login) {
           setViewer(data.login);
+
+          if (data.login.token) {
+            sessionStorage.setItem("token", data.login.token);
+          }
+
           displaySuccessNotification("You've successfully logged in!");
         }
       }

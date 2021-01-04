@@ -15,7 +15,7 @@ interface MenuItemsProps {
 }
 
 export const MenuItems = ({ viewer, setViewer }: MenuItemsProps) => {
-  const [logOut] = useMutation<LogoutProps>(LOGOUT, {
+  const [logout] = useMutation<LogoutProps>(LOGOUT, {
     onCompleted: (data) => {
       if (data && data.logout) {
         setViewer(data.logout);
@@ -26,7 +26,7 @@ export const MenuItems = ({ viewer, setViewer }: MenuItemsProps) => {
     onError: () => displayErrorMessage("Sorry! We weren't able to log you out. Please try again later!")
   });
 
-  const handleLogOut = useCallback(() => logOut(), [logOut]);
+  const handleLogOut = useCallback(() => logout(), [logout]);
 
   return (
     <Menu mode="horizontal" selectable={false} className="menu">

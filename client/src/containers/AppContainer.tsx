@@ -32,6 +32,12 @@ export function AppContainer() {
     onCompleted: (data) => {
       if (data?.login) {
         setViewer(data.login);
+
+        if (data.login.token) {
+          sessionStorage.setItem("token", data.login.token);
+        } else {
+          sessionStorage.removeItem("token");
+        }
       }
     }
   });
@@ -63,7 +69,11 @@ export function AppContainer() {
           <Route exact path={Routes.Host} component={HostPage} />
           <Route exact path={Routes.Listings} component={ListingsPage} />
           <Route exact path={Routes.Listing} component={ListingPage} />
-          <Route exact path={Routes.User} component={UserPage} />
+          <Route
+            exact
+            path={Routes.User}
+            render={(props) => <UserPage {...props} viewer={viewer} setViewer={setViewer} />}
+          />
           <Route exact path={Routes.Login} render={(props) => <LoginPage {...props} setViewer={setViewer} />} />
 
           <Route component={NotFoundPage} />

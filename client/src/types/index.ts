@@ -6,6 +6,30 @@ export interface Viewer {
   readonly didRequest: boolean;
 }
 
+export interface PaginationProps<T> {
+  readonly total: number;
+  readonly result: T[] | null;
+}
+
+export interface User {
+  readonly id: string;
+  readonly name: string;
+  readonly avatar: string;
+  readonly contact: string;
+  readonly hasWallet: boolean;
+  readonly income: number | null;
+  readonly bookings: PaginationProps<Booking>;
+  readonly listings: PaginationProps<Listing>;
+}
+
+export interface Booking {
+  readonly id: string;
+  readonly listing: Listing;
+  readonly tenant: string;
+  readonly checkIn: string;
+  readonly checkOut: string;
+}
+
 export interface Listing {
   readonly id: string;
   readonly title: string;
@@ -64,4 +88,21 @@ export interface LogoutDataProps {
 
 export interface LogoutProps {
   readonly logout: LogoutDataProps;
+}
+
+export interface UserData {
+  readonly user: User;
+}
+
+export interface UserVariables {
+  readonly id: string;
+  readonly bookingsPage: number;
+  readonly listingsPage: number;
+  readonly limit: number;
+}
+
+export interface DisconnectStripeData {
+  readonly disconnectStripe: {
+    readonly hasWallet: boolean;
+  };
 }
