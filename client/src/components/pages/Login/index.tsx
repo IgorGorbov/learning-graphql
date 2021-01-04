@@ -25,6 +25,7 @@ export const LoginPage = ({ setViewer }: LoginPageProps) => {
         if (data && data.login) {
           setViewer(data.login);
 
+          console.log("data.login.token", data.login.token);
           if (data.login.token) {
             sessionStorage.setItem("token", data.login.token);
           }

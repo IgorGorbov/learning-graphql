@@ -1,5 +1,5 @@
 import React from "react";
-import { ApolloProvider, useMutation } from "@apollo/react-hooks";
+import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
 
 import { AppContainer } from "../../containers/AppContainer";

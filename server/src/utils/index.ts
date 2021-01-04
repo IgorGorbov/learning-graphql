@@ -6,6 +6,6 @@ export const authorize = async (db: Database, req: Request): Promise<User | null
 
   return await db.users.findOne({
     _id: req.signedCookies.viewer,
-    token
+    token: token
   });
 };

@@ -44,7 +44,7 @@ export interface User {
   readonly income: number;
   readonly bookings: ObjectId[];
   readonly listings: ObjectId[];
-  readonly authorized?: boolean;
+  authorized?: boolean;
 }
 
 export interface Booking {

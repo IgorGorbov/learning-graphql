@@ -30,8 +30,8 @@ export const UserPage = ({ viewer, setViewer, match }: UserPageProps & RouteComp
   const { data, loading, error, refetch } = useQuery<UserData, UserVariables>(USER, {
     variables: {
       id: match.params.id,
-      bookingsPage,
-      listingsPage,
+      bookingsPage: bookingsPage,
+      listingsPage: listingsPage,
       limit: PAGE_LIMIT
     }
   });

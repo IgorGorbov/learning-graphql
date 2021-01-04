@@ -86,9 +86,18 @@ export const userResolvers: IResolvers = {
     user: async (_root: undefined, { id }: UserArgs, { req, db }: { req: Request; db: Database }) => {
       try {
         const user = await db.users.findOne({ _id: id });
+
+        if (!user) {
+          throw new Error("User can't be found");
+        }
+
         const viewer = await authorize(db, req);
 
-        return user ? { ...user, authorized: viewer?._id === user._id } : null;
+        if (viewer?._id === user._id) {
+          user.authorized = true;
+        }
+
+        return user;
       } catch (error) {
         throw new Error(`Failed to query user ${error}`);
       }

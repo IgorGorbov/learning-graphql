@@ -57,7 +57,7 @@ export const typeDefs = gql`
     hasWallet: Boolean!
     income: Int
     bookings(limit: Int!, page: Int!): Bookings
-    listings(limit: Int!, page: Int!): Listings!
+    listings(limit: Int!, page: Int!): Listings
   }
 
   input LoginInput {
@@ -67,6 +67,7 @@ export const typeDefs = gql`
   type Query {
     authUrl: String!
     user(id: ID!): User!
+    listing: String!
   }
 
   type Mutation {

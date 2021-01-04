@@ -65,7 +65,7 @@ export const UserProfile = ({ user, viewer, viewerIsUser, setViewer, handleUserR
         TinyHouse uses{" "}
         <a href="https://stripe.com/en-US/connect" target="_blank" rel="noopener noreferrer">
           Stripe
-        </a>
+        </a>{" "}
         to help transfer your earnings in a secure and trusted manner.
       </Paragraph>
     </Fragment>
