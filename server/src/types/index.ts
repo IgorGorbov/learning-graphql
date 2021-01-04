@@ -44,6 +44,7 @@ export interface User {
   readonly income: number;
   readonly bookings: ObjectId[];
   readonly listings: ObjectId[];
+  readonly authorized?: boolean;
 }
 
 export interface Booking {
@@ -86,4 +87,28 @@ export interface LoginProps {
 
 export interface AuthUrlProps {
   readonly authUrl: string;
+}
+
+export interface UserArgs {
+  readonly id: string;
+}
+
+export interface UserBookingArgs {
+  readonly limit: number;
+  readonly page: number;
+}
+
+export interface UserBookingData {
+  readonly total: number;
+  readonly result: Booking[];
+}
+
+export interface UserListingsArgs {
+  readonly limit: number;
+  readonly page: number;
+}
+
+export interface UserListingsData {
+  readonly total: number;
+  readonly result: Listing[];
 }
