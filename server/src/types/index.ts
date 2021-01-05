@@ -32,6 +32,7 @@ export interface Listing {
   readonly numOfGuests: number;
   readonly bookings: ObjectId[];
   readonly bookingsIndex: BookingsIndex;
+  authorized?: boolean;
 }
 
 export interface User {
@@ -111,4 +112,18 @@ export interface UserListingsArgs {
 export interface UserListingsData {
   readonly total: number;
   readonly result: Listing[];
+}
+
+export interface ListingArgs {
+  readonly id: string;
+}
+
+export interface ListingBookingsArgs {
+  readonly limit: number;
+  readonly page: number;
+}
+
+export interface ListingBookingsData {
+  readonly total: number;
+  readonly result: Booking[];
 }

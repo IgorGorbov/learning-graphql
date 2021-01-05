@@ -19,7 +19,7 @@ export const typeDefs = gql`
     title: String!
     description: String!
     image: String!
-    host: String!
+    host: User!
     type: ListingType
     address: String!
     country: String!
@@ -67,7 +67,8 @@ export const typeDefs = gql`
   type Query {
     authUrl: String!
     user(id: ID!): User!
-    listing: String!
+    listing(id: ID!): Listing!
+    listings: String!
   }
 
   type Mutation {

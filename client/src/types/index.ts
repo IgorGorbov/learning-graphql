@@ -25,21 +25,26 @@ export interface User {
 export interface Booking {
   readonly id: string;
   readonly listing: Listing;
-  readonly tenant: string;
+  readonly tenant: User;
   readonly checkIn: string;
   readonly checkOut: string;
 }
 
 export interface Listing {
   readonly id: string;
+  readonly type: string;
   readonly title: string;
   readonly image: string;
   readonly address: string;
+  readonly city: string;
   readonly price: number;
   readonly numOfGuests: number;
   readonly numOfBeds: number;
   readonly numOfBaths: number;
   readonly rating: number;
+  readonly description: string;
+  readonly host: User;
+  readonly bookings: PaginationProps<Booking>;
 }
 
 export interface Listings {
@@ -105,4 +110,14 @@ export interface DisconnectStripeData {
   readonly disconnectStripe: {
     readonly hasWallet: boolean;
   };
+}
+
+export interface ListingData {
+  readonly listing: Listing;
+}
+
+export interface ListingVariables {
+  readonly id: string;
+  readonly bookingsPage: number;
+  readonly limit: number;
 }
