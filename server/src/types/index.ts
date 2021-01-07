@@ -5,6 +5,11 @@ export enum ListingType {
   House = "HOUSE"
 }
 
+export enum ListingFilters {
+  PRICE_LOW_TO_HIGH = "PRICE_LOW_TO_HIGH",
+  PRICE_HIGH_TO_LOW = "PRICE_HIGH_TO_LOW"
+}
+
 export interface BookingsIndexMonth {
   readonly [key: string]: boolean;
 }
@@ -126,4 +131,15 @@ export interface ListingBookingsArgs {
 export interface ListingBookingsData {
   readonly total: number;
   readonly result: Booking[];
+}
+
+export interface ListingsArgs {
+  readonly filter: ListingFilters;
+  readonly limit: number;
+  readonly page: number;
+}
+
+export interface ListingsData {
+  readonly total: number;
+  readonly result: Listing[];
 }

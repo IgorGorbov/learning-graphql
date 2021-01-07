@@ -1,3 +1,8 @@
+export enum ListingsFilter {
+  PRICE_HIGH_TO_LOW = "PRICE_HIGH_TO_LOW",
+  PRICE_LOW_TO_HIGH = "PRICE_LOW_TO_HIGH"
+}
+
 export interface Viewer {
   readonly id?: string;
   readonly token?: string;
@@ -120,4 +125,15 @@ export interface ListingVariables {
   readonly id: string;
   readonly bookingsPage: number;
   readonly limit: number;
+}
+
+export interface ListingsData {
+  readonly listings: PaginationProps<Listing>;
+}
+
+export interface ListingsVariables {
+  readonly location?: string | null;
+  readonly filter: ListingsFilter;
+  readonly limit: number;
+  readonly page: number;
 }
