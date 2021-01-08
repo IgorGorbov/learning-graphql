@@ -13,8 +13,8 @@ const mount = async (app: Application) => {
   app.use(CookieParser(process.env.SECRET));
 
   const server = new ApolloServer({
-    typeDefs,
-    resolvers,
+    typeDefs: typeDefs,
+    resolvers: resolvers,
     context: ({ req, res }) => ({ req, res, db })
   });
 

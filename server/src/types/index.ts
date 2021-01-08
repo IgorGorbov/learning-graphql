@@ -134,6 +134,7 @@ export interface ListingBookingsData {
 }
 
 export interface ListingsArgs {
+  readonly location: string | null;
   readonly filter: ListingFilters;
   readonly limit: number;
   readonly page: number;
@@ -142,4 +143,10 @@ export interface ListingsArgs {
 export interface ListingsData {
   readonly total: number;
   readonly result: Listing[];
+}
+
+export interface ListingsQuery {
+  country?: string;
+  admin?: string;
+  city?: string;
 }

@@ -12,6 +12,7 @@ export interface Viewer {
 }
 
 export interface PaginationProps<T> {
+  readonly region: string;
   readonly total: number;
   readonly result: T[] | null;
 }
