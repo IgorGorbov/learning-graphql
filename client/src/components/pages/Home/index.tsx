@@ -5,11 +5,11 @@ import { Col, Row, Layout, Typography } from "antd";
 
 import { PAGE_LIMIT, PAGE_NUMBER } from "../../../constants/app";
 import { ListingsData, ListingsFilter, ListingsVariables } from "../../../types";
-import { LISTINGS } from "../../../lib/graphql/queries/listing";
+import { LISTINGS } from "../../../utils/graphql/queries/listing";
 import MapBackground from "../../assets/map-background.jpg";
 import SanFransiscoImage from "../../assets/san-fransisco.jpg";
 import CancunImage from "../../assets/cancun.jpg";
-import { displayErrorMessage } from "../../../lib/notifications";
+import { displayErrorMessage } from "../../../utils/notifications";
 import { HomeListingsSkeleton } from "./HomeListingsSkeleton";
 import { HomeListings } from "./HomeListings";
 import { HomeHero } from "./HomeHero";

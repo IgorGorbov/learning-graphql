@@ -138,3 +138,15 @@ export interface ListingsVariables {
   readonly limit: number;
   readonly page: number;
 }
+
+export interface ConnectStripeInput {
+  readonly code: string;
+}
+
+export interface ConnectStripeData {
+  readonly connectStripe: { readonly hasWallet: boolean };
+}
+
+export interface ConnectStripeVariables {
+  readonly input: ConnectStripeInput;
+}

@@ -150,3 +150,21 @@ export interface ListingsQuery {
   admin?: string;
   city?: string;
 }
+
+export interface ConnectStripeArgs {
+  readonly input: { readonly code: string };
+}
+
+export interface HostListingData {
+  readonly title: string;
+  readonly description: string;
+  readonly image: string;
+  readonly type: ListingType;
+  readonly address: string;
+  readonly price: number;
+  readonly numOfGuests: number;
+}
+
+export interface HostListingInput {
+  readonly input: HostListingData;
+}

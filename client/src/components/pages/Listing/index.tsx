@@ -5,7 +5,7 @@ import { Col, Layout, Row } from "antd";
 import { Moment } from "moment";
 
 import { PAGE_LIMIT } from "../../../constants/app";
-import { LISTING } from "../../../lib/graphql/queries/listing";
+import { LISTING } from "../../../utils/graphql/queries/listing";
 import { ListingData, ListingVariables } from "../../../types";
 import { ListingCreateBooking } from "./ListingCreateBooking";
 import { ListingBookings } from "./ListingBookings";

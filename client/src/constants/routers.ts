@@ -4,5 +4,6 @@ export const Routes = {
   Listing: "/listing/:id",
   Listings: "/listings/:location?",
   User: "/user/:id",
-  Login: "/login"
+  Login: "/login",
+  Stripe: "/stripe"
 };

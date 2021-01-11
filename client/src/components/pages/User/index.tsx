@@ -4,7 +4,7 @@ import { useQuery } from "@apollo/react-hooks";
 import { Col, Layout, Row } from "antd";
 
 import { PAGE_LIMIT } from "../../../constants/app";
-import { USER } from "../../../lib/graphql/queries/user";
+import { USER } from "../../../utils/graphql/queries/user";
 import { UserData, UserVariables, Viewer } from "../../../types";
 import { UserBookings } from "./UserBookings";
 import { UserListings } from "./UserListings";

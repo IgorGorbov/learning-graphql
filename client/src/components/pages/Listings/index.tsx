@@ -3,7 +3,7 @@ import { Link, RouteComponentProps } from "react-router-dom";
 import { useQuery } from "@apollo/react-hooks";
 import { Affix, Layout, List, Typography } from "antd";
 
-import { LISTINGS } from "../../../lib/graphql/queries/listing";
+import { LISTINGS } from "../../../utils/graphql/queries/listing";
 import { ListingsData, ListingsFilter, ListingsVariables } from "../../../types";
 import { ListingsFilters } from "./ListingsFilters";
 import { ListingsPagination } from "./ListingsPagination";

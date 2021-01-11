@@ -4,7 +4,7 @@ import { useMutation } from "@apollo/react-hooks";
 import { Affix, Layout, Spin } from "antd";
 
 import { LoginDataProps, LoginProps, Viewer } from "../types";
-import { LOGIN } from "../lib/graphql/mutations/login";
+import { LOGIN } from "../utils/graphql/mutations/login";
 import { Routes } from "../constants/routers";
 import { AppHeader } from "../components/ui/AppHeader";
 import { HomePage } from "../components/pages/Home";
@@ -14,6 +14,7 @@ import { ListingPage } from "../components/pages/Listing";
 import { UserPage } from "../components/pages/User";
 import { NotFoundPage } from "../components/pages/NotFound";
 import { LoginPage } from "../components/pages/Login";
+import { StripePage } from "../components/ui/Stripe";
 import { AppHeaderSkeleton } from "../components/ui/AppHeaderSkeleton";
 import { ErrorBanner } from "../components/ui/ErrorBanner";
 
@@ -75,6 +76,11 @@ export function AppContainer() {
             render={(props) => <UserPage {...props} viewer={viewer} setViewer={setViewer} />}
           />
           <Route exact path={Routes.Login} render={(props) => <LoginPage {...props} setViewer={setViewer} />} />
+          <Route
+            exact
+            path={Routes.Stripe}
+            render={(props) => <StripePage {...props} viewer={viewer} setViewer={setViewer} />}
+          />
 
           <Route component={NotFoundPage} />
         </Switch>

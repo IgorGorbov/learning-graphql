@@ -4,7 +4,7 @@ import { Card, Typography } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 
 import { Listing } from "../../types";
-import { formatListingPrice } from "../../lib/format";
+import { formatListingPrice } from "../../utils/format";
 
 interface ListingCardProps {
   readonly listing: Listing;

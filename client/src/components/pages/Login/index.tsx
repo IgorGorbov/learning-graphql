@@ -5,10 +5,10 @@ import { Card, Layout, Spin, Typography } from "antd";
 
 import { AuthUrlProps, LoginArgs, LoginProps, Viewer } from "../../../types";
 import GoogleLogo from "../../../assets/google_logo.jpg";
-import { LOGIN } from "../../../lib/graphql/mutations/login";
-import { AUTH_URL } from "../../../lib/graphql/queries/authurl";
+import { LOGIN } from "../../../utils/graphql/mutations/login";
+import { AUTH_URL } from "../../../utils/graphql/queries/authurl";
 import { ErrorBanner } from "../../ui/ErrorBanner";
-import { displaySuccessNotification, displayErrorMessage } from "../../../lib/notifications";
+import { displaySuccessNotification, displayErrorMessage } from "../../../utils/notifications";
 
 interface LoginPageProps {
   setViewer: (viewer: Viewer) => void;

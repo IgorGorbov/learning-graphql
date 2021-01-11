@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import { useMutation } from "@apollo/react-hooks";
 import { Avatar, Button, Card, Divider, Tag, Typography } from "antd";
 
+import { STRIPE_AUTH_URL } from "../../../../constants/app";
 import { DisconnectStripeData, UserData, Viewer } from "../../../../types";
-import { DISCONNECT_STRIPE } from "../../../../lib/graphql/mutations/stripe";
-import { displayErrorMessage, displaySuccessNotification } from "../../../../lib/notifications";
-import { formatListingPrice } from "../../../../lib/format";
+import { DISCONNECT_STRIPE } from "../../../../utils/graphql/mutations/stripe";
+import { displayErrorMessage, displaySuccessNotification } from "../../../../utils/notifications";
+import { formatListingPrice } from "../../../../utils/format";
 
 interface Props {
   readonly user: UserData["user"];
@@ -15,7 +16,6 @@ interface Props {
   readonly handleUserRefetch: () => void;
 }
 
-const stripeAuthUrl = `https://connect.stripe.com/oauth/authorize?response_type=code&client_id=${process.env.REACT_APP_S_CLIENT_ID}&scope=read_write`;
 const { Paragraph, Text, Title } = Typography;
 
 export const UserProfile = ({ user, viewer, viewerIsUser, setViewer, handleUserRefetch }: Props) => {
@@ -36,7 +36,7 @@ export const UserProfile = ({ user, viewer, viewerIsUser, setViewer, handleUserR
   });
 
   const redirectToStripe = () => {
-    window.location.href = stripeAuthUrl;
+    window.location.href = STRIPE_AUTH_URL;
   };
 
   const additionalDetails = user.hasWallet ? (

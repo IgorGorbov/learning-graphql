@@ -1,17 +1,17 @@
 import { gql } from "apollo-server-express";
 
 export const typeDefs = gql`
+  enum ListingType {
+    APARTMEN
+    HOUSE
+  }
+
   type Viewer {
     id: ID
     token: String
     avatar: String
     hasWallet: Boolean
     didRequest: Boolean!
-  }
-
-  enum ListingType {
-    APARTMEN
-    HOUSE
   }
 
   type Listing {
@@ -65,9 +65,21 @@ export const typeDefs = gql`
     code: String!
   }
 
-  enum ListingsFilter {
-    PRICE_LOW_TO_HIGH
-    PRICE_HIGHT_TO_LOW
+  input LoginInput {
+    code: String!
+  }
+  input ConnectStripeInput {
+    code: String!
+  }
+
+  input HostListingInput {
+    title: String!
+    description: String!
+    image: String!
+    type: ListType!
+    address: String!
+    proce: Int!
+    numOfGuests: Int!
   }
 
   type Query {
@@ -80,5 +92,8 @@ export const typeDefs = gql`
   type Mutation {
     login(input: LoginInput): Viewer!
     logout: Viewer!
+    connectStripe(input: ConnectStripeInput): Viewer!
+    disconnectStripe: Viewer!
+    hostListing(input: HostListingInput): Listing!
   }
 `;

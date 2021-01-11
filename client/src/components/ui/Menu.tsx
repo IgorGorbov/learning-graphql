@@ -6,8 +6,8 @@ import { useMutation } from "@apollo/react-hooks";
 
 import { LogoutProps, Viewer } from "../../types";
 import { Routes } from "../../constants/routers";
-import { LOGOUT } from "../../lib/graphql/mutations/logout";
-import { displayErrorMessage, displaySuccessNotification } from "../../lib/notifications";
+import { LOGOUT } from "../../utils/graphql/mutations/logout";
+import { displayErrorMessage, displaySuccessNotification } from "../../utils/notifications";
 
 interface MenuItemsProps {
   readonly viewer: Viewer;
